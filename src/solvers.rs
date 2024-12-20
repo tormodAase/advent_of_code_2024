@@ -1,11 +1,18 @@
 use crate::day_one::{DayOnePuzzleOne, DayOnePuzzleTwo};
+use crate::day_two::{DayTwoPuzzleOne, DayTwoPuzzleTwo};
 use crate::helpers::*;
 
 pub fn get_solvers() -> Vec<Collection> {
-    let mut solvers = vec![Collection {
-        puzzle_1: Box::new(DayOnePuzzleOne::new()),
-        puzzle_2: Box::new(DayOnePuzzleTwo::new()),
-    }];
+    let mut solvers = vec![
+        Collection {
+            puzzle_1: Box::new(DayOnePuzzleOne::new()),
+            puzzle_2: Box::new(DayOnePuzzleTwo::new()),
+        },
+        Collection {
+            puzzle_1: Box::new(DayTwoPuzzleOne::new()),
+            puzzle_2: Box::new(DayTwoPuzzleTwo::new()),
+        },
+    ];
 
     for _ in 0..(25 - solvers.len()) {
         solvers.push(Collection {
