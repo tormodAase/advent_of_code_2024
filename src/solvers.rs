@@ -1,4 +1,5 @@
 use crate::day_one::{DayOnePuzzleOne, DayOnePuzzleTwo};
+use crate::day_three::DayThreePuzzleOne;
 use crate::day_two::{DayTwoPuzzleOne, DayTwoPuzzleTwo};
 use crate::helpers::*;
 
@@ -11,6 +12,10 @@ pub fn get_solvers() -> Vec<Collection> {
         Collection {
             puzzle_1: Box::new(DayTwoPuzzleOne::new()),
             puzzle_2: Box::new(DayTwoPuzzleTwo::new()),
+        },
+        Collection {
+            puzzle_1: Box::new(DayThreePuzzleOne::new()),
+            puzzle_2: Box::new(NotImplementedYet::new()),
         },
     ];
 
